@@ -1,0 +1,26 @@
+[
+  {
+    "model": "caloriesApp.Mancat",
+    "fields": {
+      "username": 1,
+      "articole_mancate": 1,
+      "amount": 50
+    }
+  },
+  {
+    "model": "caloriesApp.Mancat",
+    "fields": {
+      "username": 1,
+      "articole_mancate": 3,
+      "amount": 70
+    }
+  },
+  {
+    "model": "caloriesApp.Mancat",
+    "fields": {
+      "username": 2,
+      "articole_mancate": 3,
+      "amount": 60
+    }
+  }
+]

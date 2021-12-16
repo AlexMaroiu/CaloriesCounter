@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <br/><br/>
+
+    <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form method="post" action="" >
+                        {% csrf_token %}
+                        <div class="form-floating mb-3">
+                            <select class="form-select form-select-md" name="id_articol" id="id_articol" >
+                                <option selected>Denumire produs</option>
+                                {% for articol in articole %}
+                                    <option value="{{articol.id}}">{{articol.nume}}</option>
+                                {% endfor %}
+
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="amount" name="amount" type="number" placeholder="Introdu cantitate in grame" />
+                            <label for="amount">Introdu cantitate</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+
+                            <input class="btn btn-primary" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+{% endblock %}

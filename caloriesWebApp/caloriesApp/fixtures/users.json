@@ -1,0 +1,14 @@
+[
+  {
+    "model": "auth.user",
+    "fields": {
+      "first_name": "Andrei",
+      "last_name": "Maroiu",
+      "email": "andreimaroiu@yahoo.com",
+      "username": "andreimaroiu@yahoo.com",
+      "is_superuser": 1,
+      "is_staff": 1,
+      "password": "pbkdf2_sha256$320000$YaAWsJJviux52ViuJHeOnV$Y4PqtS2RtYoerElxENiXDSck9xNPkiF3e5F+zuLGMDw="
+    }
+  }
+]

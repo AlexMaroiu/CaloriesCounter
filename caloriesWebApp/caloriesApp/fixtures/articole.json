@@ -1,0 +1,22 @@
+[
+  {
+    "model": "caloriesApp.Articol",
+    "fields": {
+      "nume": "banana",
+      "firma": "orice",
+      "calorii": 121,
+      "created_at": "2021-12-12 11:00:00",
+      "updated_at": "2021-12-12 11:00:00"
+    }
+  },
+  {
+    "model": "caloriesApp.Articol",
+    "fields": {
+      "nume": "Conserva ton in suc propiu",
+      "firma": "Sun & Sea",
+      "calorii": 117.5,
+      "created_at": "2021-12-12 11:00:00",
+      "updated_at": "2021-12-12 11:00:00"
+    }
+  }
+]

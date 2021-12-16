@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="card col-md-6">
+        <h3 class="row justify-content-center">Profil Utilizator</h3>
+        <p>Prenume: {{utilizator.first_name}}</p>
+        <p>Nume: {{utilizator.last_name}}</p>
+        <p>Adresa de mail: {{utilizator.email}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="row justify-content-center">
+          <h4 class="row justify-content-center">Zilele trecute ai mancat</h4>
+        </div>
+        <ul class="list-group">
+          {% for p in profil %}
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">{{p.zi}} </div>
+            </div>
+            <div class="align-items-end">
+              <span class="badge bg-primary rounded-pill">{{p.calorii}}(kcal)</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}

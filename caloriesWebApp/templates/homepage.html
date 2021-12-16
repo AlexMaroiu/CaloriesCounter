@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h3 class="row justify-content-center mb-5">Calculator calorii</h3>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+            <h4 class="row justify-content-center">Produse: </h4>
+            {% if mancate %}
+            <ol class="list-group list-group-numbered">
+                {% for articol in mancate %}
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">{{articol.articole_mancate.nume}} </div>
+                      {{articol.articole_mancate.firma}}
+                    </div>
+                      <div class="align-items-end">
+                        <span class="badge bg-primary rounded-pill">{{articol.amount}}(grame)</span>
+                          <br/>
+                        <span class="badge bg-primary rounded-pill">{{articol.calorii}}(kcal)</span>
+                      </div>
+                  </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+            </div>
+
+        </div>
+        <br/>
+        <h3 class="row justify-content-center"> Total: {{total}}</h3>
+        <h3 class="row justify-content-center"> Mai poti manca: {{ramas}}(kcal)</h3>
+
+        <br/>
+        <div class="text-center">
+            <form method="post">
+                {% csrf_token %}
+                <button class="btn btn-primary" type="submit">Gata azi</button>
+            </form>
+        </div>
+
+    </div>
+    <!--<img src="{% static 'poza.jfif' %}">
+    -->
+{% endblock %}
